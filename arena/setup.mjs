@@ -1,0 +1,5 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import {createMatch} from './referee.mjs';
+const input=JSON.parse(fs.readFileSync(process.argv[2]||'match-prompts.json','utf8'));
+if(!['A','B'].every(s=>typeof input.strategies?.[s]==='string'&&input.strategies[s].trim()&&input.strategies[s].length<=6000))throw Error('Both strategies must contain 1–6000 characters.');
+const dir=path.resolve(process.argv[3]||'.arena-state');fs.mkdirSync(dir,{recursive:true});if(fs.existsSync(path.join(dir,'match.json')))throw Error('A match already exists here. Choose a new state directory.');
+const match=createMatch(input.strategies),seats={A:crypto.randomUUID(),B:crypto.randomUUID()};match.players.A.name='Agent A';match.players.B.name='Agent B';fs.writeFileSync(path.join(dir,'match.json'),JSON.stringify(match,null,2));fs.writeFileSync(path.join(dir,'seats.json'),JSON.stringify(seats));console.log(JSON.stringify({match_id:match.id,state_directory:dir,seats,instruction:'Give each agent only its own token. Start referee.mjs serve with this state directory.'},null,2));

@@ -1,0 +1,6 @@
+.arena-state*/
+**/seats.json
+**/match.json
+.openai/
+node_modules/
+*.log

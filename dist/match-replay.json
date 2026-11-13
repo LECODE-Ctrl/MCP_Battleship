@@ -1,0 +1,1070 @@
+{
+  "id": "aad492f2-a45c-4811-a759-1f80b0786361",
+  "status": "finished",
+  "winner": "A",
+  "createdAt": "2026-11-12T20:25:25.200Z",
+  "finishedAt": "2026-11-12T20:34:04.021Z",
+  "players": {
+    "A": {
+      "name": "Terra / Checkerboard",
+      "strategy": "Use a checkerboard search across the board, spreading probes between regions. After a hit, test orthogonal neighbors; after two aligned hits, pursue that line until the ship sinks. Place ships far apart, with mixed orientations. Choose each shot yourself from the referee view.",
+      "fleet": [
+        {
+          "size": "big",
+          "cells": [
+            "A1",
+            "A2",
+            "A3",
+            "A4",
+            "A5"
+          ]
+        },
+        {
+          "size": "medium",
+          "cells": [
+            "H3",
+            "I3",
+            "J3"
+          ]
+        },
+        {
+          "size": "small",
+          "cells": [
+            "C9",
+            "C10"
+          ]
+        }
+      ],
+      "shots": [
+        {
+          "coordinate": "E5",
+          "hit": false,
+          "sunk": false,
+          "reason": "Central checkerboard probe"
+        },
+        {
+          "coordinate": "B2",
+          "hit": true,
+          "sunk": false,
+          "reason": "Northwest checkerboard probe"
+        },
+        {
+          "coordinate": "B3",
+          "hit": false,
+          "sunk": false,
+          "reason": "Test neighbor of B2 hit"
+        },
+        {
+          "coordinate": "C2",
+          "hit": true,
+          "sunk": false,
+          "reason": "Test vertical neighbor of B2"
+        },
+        {
+          "coordinate": "D2",
+          "hit": true,
+          "sunk": false,
+          "reason": "Extend aligned hits"
+        },
+        {
+          "coordinate": "E2",
+          "hit": true,
+          "sunk": false,
+          "reason": "Continue along aligned hits"
+        },
+        {
+          "coordinate": "F2",
+          "hit": true,
+          "sunk": true,
+          "reason": "Continue aligned four hits",
+          "size": "big"
+        },
+        {
+          "coordinate": "H8",
+          "hit": false,
+          "sunk": false,
+          "reason": "Southeast checkerboard probe"
+        },
+        {
+          "coordinate": "C8",
+          "hit": false,
+          "sunk": false,
+          "reason": "Northeast checkerboard probe"
+        },
+        {
+          "coordinate": "H4",
+          "hit": false,
+          "sunk": false,
+          "reason": "Southwest checkerboard probe"
+        },
+        {
+          "coordinate": "D6",
+          "hit": false,
+          "sunk": false,
+          "reason": "Central checkerboard coverage"
+        },
+        {
+          "coordinate": "J6",
+          "hit": false,
+          "sunk": false,
+          "reason": "Southern edge checkerboard probe"
+        },
+        {
+          "coordinate": "A6",
+          "hit": false,
+          "sunk": false,
+          "reason": "Northern edge checkerboard probe"
+        },
+        {
+          "coordinate": "F8",
+          "hit": true,
+          "sunk": false,
+          "reason": "Eastern checkerboard coverage"
+        },
+        {
+          "coordinate": "F9",
+          "hit": true,
+          "sunk": false,
+          "reason": "Test neighbor of F8 hit"
+        },
+        {
+          "coordinate": "F10",
+          "hit": true,
+          "sunk": true,
+          "reason": "Extend aligned hits",
+          "size": "medium"
+        },
+        {
+          "coordinate": "I1",
+          "hit": false,
+          "sunk": false,
+          "reason": "Southwest edge checkerboard probe"
+        },
+        {
+          "coordinate": "B10",
+          "hit": false,
+          "sunk": false,
+          "reason": "Northeast edge checkerboard probe"
+        },
+        {
+          "coordinate": "G5",
+          "hit": false,
+          "sunk": false,
+          "reason": "South central checkerboard probe"
+        },
+        {
+          "coordinate": "D4",
+          "hit": false,
+          "sunk": false,
+          "reason": "North central checkerboard probe"
+        },
+        {
+          "coordinate": "J10",
+          "hit": false,
+          "sunk": false,
+          "reason": "Southeast corner checkerboard probe"
+        },
+        {
+          "coordinate": "A10",
+          "hit": false,
+          "sunk": false,
+          "reason": "Northern edge coverage"
+        },
+        {
+          "coordinate": "I7",
+          "hit": false,
+          "sunk": false,
+          "reason": "Southern checkerboard coverage"
+        },
+        {
+          "coordinate": "B6",
+          "hit": false,
+          "sunk": false,
+          "reason": "Northern checkerboard coverage"
+        },
+        {
+          "coordinate": "F4",
+          "hit": false,
+          "sunk": false,
+          "reason": "West central checkerboard coverage"
+        },
+        {
+          "coordinate": "H10",
+          "hit": false,
+          "sunk": false,
+          "reason": "Eastern edge checkerboard coverage"
+        },
+        {
+          "coordinate": "C4",
+          "hit": false,
+          "sunk": false,
+          "reason": "Northern checkerboard coverage"
+        },
+        {
+          "coordinate": "G9",
+          "hit": false,
+          "sunk": false,
+          "reason": "Eastern checkerboard coverage"
+        },
+        {
+          "coordinate": "J2",
+          "hit": false,
+          "sunk": false,
+          "reason": "Southern edge coverage"
+        },
+        {
+          "coordinate": "E9",
+          "hit": false,
+          "sunk": false,
+          "reason": "Eastern checkerboard coverage"
+        },
+        {
+          "coordinate": "C6",
+          "hit": false,
+          "sunk": false,
+          "reason": "Northern interior coverage"
+        },
+        {
+          "coordinate": "I3",
+          "hit": true,
+          "sunk": false,
+          "reason": "Southern interior coverage"
+        },
+        {
+          "coordinate": "J3",
+          "hit": true,
+          "sunk": true,
+          "reason": "Test neighbor of I3 hit",
+          "size": "small"
+        }
+      ]
+    },
+    "B": {
+      "name": "Terra / Probability",
+      "strategy": "Use a probability-inspired search: favor squares crossed by many possible placements of the remaining ship lengths. Use misses to rule out locations. Pursue aligned hits until sunk, then re-evaluate the remaining lengths. Place ships asymmetrically. Choose each shot yourself from the referee view.",
+      "fleet": [
+        {
+          "size": "big",
+          "cells": [
+            "B2",
+            "C2",
+            "D2",
+            "E2",
+            "F2"
+          ]
+        },
+        {
+          "size": "medium",
+          "cells": [
+            "F8",
+            "F9",
+            "F10"
+          ]
+        },
+        {
+          "size": "small",
+          "cells": [
+            "I3",
+            "J3"
+          ]
+        }
+      ],
+      "shots": [
+        {
+          "coordinate": "E5",
+          "hit": false,
+          "sunk": false,
+          "reason": "Central high-coverage search"
+        },
+        {
+          "coordinate": "G7",
+          "hit": false,
+          "sunk": false,
+          "reason": "Spread central checkerboard search"
+        },
+        {
+          "coordinate": "D8",
+          "hit": false,
+          "sunk": false,
+          "reason": "Probe northeast high-coverage region"
+        },
+        {
+          "coordinate": "G3",
+          "hit": false,
+          "sunk": false,
+          "reason": "Probe southwest open region"
+        },
+        {
+          "coordinate": "C3",
+          "hit": false,
+          "sunk": false,
+          "reason": "Probe northwest open region"
+        },
+        {
+          "coordinate": "B6",
+          "hit": false,
+          "sunk": false,
+          "reason": "Probe northern open lanes"
+        },
+        {
+          "coordinate": "I5",
+          "hit": false,
+          "sunk": false,
+          "reason": "Probe southern open lanes"
+        },
+        {
+          "coordinate": "H10",
+          "hit": false,
+          "sunk": false,
+          "reason": "Probe eastern open lanes"
+        },
+        {
+          "coordinate": "F1",
+          "hit": false,
+          "sunk": false,
+          "reason": "Probe western open lanes"
+        },
+        {
+          "coordinate": "F6",
+          "hit": false,
+          "sunk": false,
+          "reason": "Probe remaining central placements"
+        },
+        {
+          "coordinate": "D4",
+          "hit": false,
+          "sunk": false,
+          "reason": "Probe central-west open placements"
+        },
+        {
+          "coordinate": "C10",
+          "hit": true,
+          "sunk": false,
+          "reason": "Probe eastern edge open lanes"
+        },
+        {
+          "coordinate": "D10",
+          "hit": false,
+          "sunk": false,
+          "reason": "Test vertical neighbor of hit"
+        },
+        {
+          "coordinate": "B10",
+          "hit": false,
+          "sunk": false,
+          "reason": "Test other vertical neighbor"
+        },
+        {
+          "coordinate": "C9",
+          "hit": true,
+          "sunk": true,
+          "reason": "Only adjacent continuation of C10",
+          "size": "small"
+        },
+        {
+          "coordinate": "H1",
+          "hit": false,
+          "sunk": false,
+          "reason": "Search western open lanes"
+        },
+        {
+          "coordinate": "J8",
+          "hit": false,
+          "sunk": false,
+          "reason": "Search southern open lanes"
+        },
+        {
+          "coordinate": "A4",
+          "hit": true,
+          "sunk": false,
+          "reason": "Probe northern edge placements"
+        },
+        {
+          "coordinate": "A3",
+          "hit": true,
+          "sunk": false,
+          "reason": "Test neighbor of northern hit"
+        },
+        {
+          "coordinate": "A2",
+          "hit": true,
+          "sunk": false,
+          "reason": "Extend aligned hits"
+        },
+        {
+          "coordinate": "A5",
+          "hit": true,
+          "sunk": false,
+          "reason": "Extend aligned hits toward center"
+        },
+        {
+          "coordinate": "A6",
+          "hit": false,
+          "sunk": false,
+          "reason": "Complete likely five-cell ship"
+        },
+        {
+          "coordinate": "A1",
+          "hit": true,
+          "sunk": true,
+          "reason": "Complete forced five-cell ship",
+          "size": "big"
+        },
+        {
+          "coordinate": "H6",
+          "hit": false,
+          "sunk": false,
+          "reason": "Search remaining three-cell placements"
+        },
+        {
+          "coordinate": "F9",
+          "hit": false,
+          "sunk": false,
+          "reason": "Search eastern three-cell placements"
+        },
+        {
+          "coordinate": "E2",
+          "hit": false,
+          "sunk": false,
+          "reason": "Search western three-cell placements"
+        },
+        {
+          "coordinate": "C6",
+          "hit": false,
+          "sunk": false,
+          "reason": "Search northern interior placements"
+        },
+        {
+          "coordinate": "I2",
+          "hit": false,
+          "sunk": false,
+          "reason": "Search southwest open placements"
+        },
+        {
+          "coordinate": "E7",
+          "hit": false,
+          "sunk": false,
+          "reason": "Search central eastern open placements"
+        },
+        {
+          "coordinate": "G5",
+          "hit": false,
+          "sunk": false,
+          "reason": "Search central southern open placements"
+        },
+        {
+          "coordinate": "B8",
+          "hit": false,
+          "sunk": false,
+          "reason": "Search northern eastern lanes"
+        },
+        {
+          "coordinate": "J4",
+          "hit": false,
+          "sunk": false,
+          "reason": "Search southern edge three-cell lanes"
+        }
+      ]
+    }
+  },
+  "events": [
+    {
+      "type": "placement",
+      "seat": "A"
+    },
+    {
+      "type": "placement",
+      "seat": "B"
+    },
+    {
+      "type": "shot",
+      "seat": "A",
+      "coordinate": "E5",
+      "hit": false,
+      "sunk": false,
+      "reason": "Central checkerboard probe",
+      "number": 1
+    },
+    {
+      "type": "shot",
+      "seat": "B",
+      "coordinate": "E5",
+      "hit": false,
+      "sunk": false,
+      "reason": "Central high-coverage search",
+      "number": 2
+    },
+    {
+      "type": "shot",
+      "seat": "A",
+      "coordinate": "B2",
+      "hit": true,
+      "sunk": false,
+      "reason": "Northwest checkerboard probe",
+      "number": 3
+    },
+    {
+      "type": "shot",
+      "seat": "B",
+      "coordinate": "G7",
+      "hit": false,
+      "sunk": false,
+      "reason": "Spread central checkerboard search",
+      "number": 4
+    },
+    {
+      "type": "shot",
+      "seat": "A",
+      "coordinate": "B3",
+      "hit": false,
+      "sunk": false,
+      "reason": "Test neighbor of B2 hit",
+      "number": 5
+    },
+    {
+      "type": "shot",
+      "seat": "B",
+      "coordinate": "D8",
+      "hit": false,
+      "sunk": false,
+      "reason": "Probe northeast high-coverage region",
+      "number": 6
+    },
+    {
+      "type": "shot",
+      "seat": "A",
+      "coordinate": "C2",
+      "hit": true,
+      "sunk": false,
+      "reason": "Test vertical neighbor of B2",
+      "number": 7
+    },
+    {
+      "type": "shot",
+      "seat": "B",
+      "coordinate": "G3",
+      "hit": false,
+      "sunk": false,
+      "reason": "Probe southwest open region",
+      "number": 8
+    },
+    {
+      "type": "shot",
+      "seat": "A",
+      "coordinate": "D2",
+      "hit": true,
+      "sunk": false,
+      "reason": "Extend aligned hits",
+      "number": 9
+    },
+    {
+      "type": "shot",
+      "seat": "B",
+      "coordinate": "C3",
+      "hit": false,
+      "sunk": false,
+      "reason": "Probe northwest open region",
+      "number": 10
+    },
+    {
+      "type": "shot",
+      "seat": "A",
+      "coordinate": "E2",
+      "hit": true,
+      "sunk": false,
+      "reason": "Continue along aligned hits",
+      "number": 11
+    },
+    {
+      "type": "shot",
+      "seat": "B",
+      "coordinate": "B6",
+      "hit": false,
+      "sunk": false,
+      "reason": "Probe northern open lanes",
+      "number": 12
+    },
+    {
+      "type": "shot",
+      "seat": "A",
+      "coordinate": "F2",
+      "hit": true,
+      "sunk": true,
+      "reason": "Continue aligned four hits",
+      "size": "big",
+      "number": 13
+    },
+    {
+      "type": "shot",
+      "seat": "B",
+      "coordinate": "I5",
+      "hit": false,
+      "sunk": false,
+      "reason": "Probe southern open lanes",
+      "number": 14
+    },
+    {
+      "type": "shot",
+      "seat": "A",
+      "coordinate": "H8",
+      "hit": false,
+      "sunk": false,
+      "reason": "Southeast checkerboard probe",
+      "number": 15
+    },
+    {
+      "type": "shot",
+      "seat": "B",
+      "coordinate": "H10",
+      "hit": false,
+      "sunk": false,
+      "reason": "Probe eastern open lanes",
+      "number": 16
+    },
+    {
+      "type": "shot",
+      "seat": "A",
+      "coordinate": "C8",
+      "hit": false,
+      "sunk": false,
+      "reason": "Northeast checkerboard probe",
+      "number": 17
+    },
+    {
+      "type": "shot",
+      "seat": "B",
+      "coordinate": "F1",
+      "hit": false,
+      "sunk": false,
+      "reason": "Probe western open lanes",
+      "number": 18
+    },
+    {
+      "type": "shot",
+      "seat": "A",
+      "coordinate": "H4",
+      "hit": false,
+      "sunk": false,
+      "reason": "Southwest checkerboard probe",
+      "number": 19
+    },
+    {
+      "type": "shot",
+      "seat": "B",
+      "coordinate": "F6",
+      "hit": false,
+      "sunk": false,
+      "reason": "Probe remaining central placements",
+      "number": 20
+    },
+    {
+      "type": "shot",
+      "seat": "A",
+      "coordinate": "D6",
+      "hit": false,
+      "sunk": false,
+      "reason": "Central checkerboard coverage",
+      "number": 21
+    },
+    {
+      "type": "shot",
+      "seat": "B",
+      "coordinate": "D4",
+      "hit": false,
+      "sunk": false,
+      "reason": "Probe central-west open placements",
+      "number": 22
+    },
+    {
+      "type": "shot",
+      "seat": "A",
+      "coordinate": "J6",
+      "hit": false,
+      "sunk": false,
+      "reason": "Southern edge checkerboard probe",
+      "number": 23
+    },
+    {
+      "type": "shot",
+      "seat": "B",
+      "coordinate": "C10",
+      "hit": true,
+      "sunk": false,
+      "reason": "Probe eastern edge open lanes",
+      "number": 24
+    },
+    {
+      "type": "shot",
+      "seat": "A",
+      "coordinate": "A6",
+      "hit": false,
+      "sunk": false,
+      "reason": "Northern edge checkerboard probe",
+      "number": 25
+    },
+    {
+      "type": "shot",
+      "seat": "B",
+      "coordinate": "D10",
+      "hit": false,
+      "sunk": false,
+      "reason": "Test vertical neighbor of hit",
+      "number": 26
+    },
+    {
+      "type": "shot",
+      "seat": "A",
+      "coordinate": "F8",
+      "hit": true,
+      "sunk": false,
+      "reason": "Eastern checkerboard coverage",
+      "number": 27
+    },
+    {
+      "type": "shot",
+      "seat": "B",
+      "coordinate": "B10",
+      "hit": false,
+      "sunk": false,
+      "reason": "Test other vertical neighbor",
+      "number": 28
+    },
+    {
+      "type": "shot",
+      "seat": "A",
+      "coordinate": "F9",
+      "hit": true,
+      "sunk": false,
+      "reason": "Test neighbor of F8 hit",
+      "number": 29
+    },
+    {
+      "type": "shot",
+      "seat": "B",
+      "coordinate": "C9",
+      "hit": true,
+      "sunk": true,
+      "reason": "Only adjacent continuation of C10",
+      "size": "small",
+      "number": 30
+    },
+    {
+      "type": "shot",
+      "seat": "A",
+      "coordinate": "F10",
+      "hit": true,
+      "sunk": true,
+      "reason": "Extend aligned hits",
+      "size": "medium",
+      "number": 31
+    },
+    {
+      "type": "shot",
+      "seat": "B",
+      "coordinate": "H1",
+      "hit": false,
+      "sunk": false,
+      "reason": "Search western open lanes",
+      "number": 32
+    },
+    {
+      "type": "shot",
+      "seat": "A",
+      "coordinate": "I1",
+      "hit": false,
+      "sunk": false,
+      "reason": "Southwest edge checkerboard probe",
+      "number": 33
+    },
+    {
+      "type": "shot",
+      "seat": "B",
+      "coordinate": "J8",
+      "hit": false,
+      "sunk": false,
+      "reason": "Search southern open lanes",
+      "number": 34
+    },
+    {
+      "type": "shot",
+      "seat": "A",
+      "coordinate": "B10",
+      "hit": false,
+      "sunk": false,
+      "reason": "Northeast edge checkerboard probe",
+      "number": 35
+    },
+    {
+      "type": "shot",
+      "seat": "B",
+      "coordinate": "A4",
+      "hit": true,
+      "sunk": false,
+      "reason": "Probe northern edge placements",
+      "number": 36
+    },
+    {
+      "type": "shot",
+      "seat": "A",
+      "coordinate": "G5",
+      "hit": false,
+      "sunk": false,
+      "reason": "South central checkerboard probe",
+      "number": 37
+    },
+    {
+      "type": "shot",
+      "seat": "B",
+      "coordinate": "A3",
+      "hit": true,
+      "sunk": false,
+      "reason": "Test neighbor of northern hit",
+      "number": 38
+    },
+    {
+      "type": "shot",
+      "seat": "A",
+      "coordinate": "D4",
+      "hit": false,
+      "sunk": false,
+      "reason": "North central checkerboard probe",
+      "number": 39
+    },
+    {
+      "type": "shot",
+      "seat": "B",
+      "coordinate": "A2",
+      "hit": true,
+      "sunk": false,
+      "reason": "Extend aligned hits",
+      "number": 40
+    },
+    {
+      "type": "shot",
+      "seat": "A",
+      "coordinate": "J10",
+      "hit": false,
+      "sunk": false,
+      "reason": "Southeast corner checkerboard probe",
+      "number": 41
+    },
+    {
+      "type": "shot",
+      "seat": "B",
+      "coordinate": "A5",
+      "hit": true,
+      "sunk": false,
+      "reason": "Extend aligned hits toward center",
+      "number": 42
+    },
+    {
+      "type": "shot",
+      "seat": "A",
+      "coordinate": "A10",
+      "hit": false,
+      "sunk": false,
+      "reason": "Northern edge coverage",
+      "number": 43
+    },
+    {
+      "type": "shot",
+      "seat": "B",
+      "coordinate": "A6",
+      "hit": false,
+      "sunk": false,
+      "reason": "Complete likely five-cell ship",
+      "number": 44
+    },
+    {
+      "type": "shot",
+      "seat": "A",
+      "coordinate": "I7",
+      "hit": false,
+      "sunk": false,
+      "reason": "Southern checkerboard coverage",
+      "number": 45
+    },
+    {
+      "type": "shot",
+      "seat": "B",
+      "coordinate": "A1",
+      "hit": true,
+      "sunk": true,
+      "reason": "Complete forced five-cell ship",
+      "size": "big",
+      "number": 46
+    },
+    {
+      "type": "shot",
+      "seat": "A",
+      "coordinate": "B6",
+      "hit": false,
+      "sunk": false,
+      "reason": "Northern checkerboard coverage",
+      "number": 47
+    },
+    {
+      "type": "shot",
+      "seat": "B",
+      "coordinate": "H6",
+      "hit": false,
+      "sunk": false,
+      "reason": "Search remaining three-cell placements",
+      "number": 48
+    },
+    {
+      "type": "shot",
+      "seat": "A",
+      "coordinate": "F4",
+      "hit": false,
+      "sunk": false,
+      "reason": "West central checkerboard coverage",
+      "number": 49
+    },
+    {
+      "type": "shot",
+      "seat": "B",
+      "coordinate": "F9",
+      "hit": false,
+      "sunk": false,
+      "reason": "Search eastern three-cell placements",
+      "number": 50
+    },
+    {
+      "type": "shot",
+      "seat": "A",
+      "coordinate": "H10",
+      "hit": false,
+      "sunk": false,
+      "reason": "Eastern edge checkerboard coverage",
+      "number": 51
+    },
+    {
+      "type": "shot",
+      "seat": "B",
+      "coordinate": "E2",
+      "hit": false,
+      "sunk": false,
+      "reason": "Search western three-cell placements",
+      "number": 52
+    },
+    {
+      "type": "shot",
+      "seat": "A",
+      "coordinate": "C4",
+      "hit": false,
+      "sunk": false,
+      "reason": "Northern checkerboard coverage",
+      "number": 53
+    },
+    {
+      "type": "shot",
+      "seat": "B",
+      "coordinate": "C6",
+      "hit": false,
+      "sunk": false,
+      "reason": "Search northern interior placements",
+      "number": 54
+    },
+    {
+      "type": "shot",
+      "seat": "A",
+      "coordinate": "G9",
+      "hit": false,
+      "sunk": false,
+      "reason": "Eastern checkerboard coverage",
+      "number": 55
+    },
+    {
+      "type": "shot",
+      "seat": "B",
+      "coordinate": "I2",
+      "hit": false,
+      "sunk": false,
+      "reason": "Search southwest open placements",
+      "number": 56
+    },
+    {
+      "type": "shot",
+      "seat": "A",
+      "coordinate": "J2",
+      "hit": false,
+      "sunk": false,
+      "reason": "Southern edge coverage",
+      "number": 57
+    },
+    {
+      "type": "shot",
+      "seat": "B",
+      "coordinate": "E7",
+      "hit": false,
+      "sunk": false,
+      "reason": "Search central eastern open placements",
+      "number": 58
+    },
+    {
+      "type": "shot",
+      "seat": "A",
+      "coordinate": "E9",
+      "hit": false,
+      "sunk": false,
+      "reason": "Eastern checkerboard coverage",
+      "number": 59
+    },
+    {
+      "type": "shot",
+      "seat": "B",
+      "coordinate": "G5",
+      "hit": false,
+      "sunk": false,
+      "reason": "Search central southern open placements",
+      "number": 60
+    },
+    {
+      "type": "shot",
+      "seat": "A",
+      "coordinate": "C6",
+      "hit": false,
+      "sunk": false,
+      "reason": "Northern interior coverage",
+      "number": 61
+    },
+    {
+      "type": "shot",
+      "seat": "B",
+      "coordinate": "B8",
+      "hit": false,
+      "sunk": false,
+      "reason": "Search northern eastern lanes",
+      "number": 62
+    },
+    {
+      "type": "shot",
+      "seat": "A",
+      "coordinate": "I3",
+      "hit": true,
+      "sunk": false,
+      "reason": "Southern interior coverage",
+      "number": 63
+    },
+    {
+      "type": "shot",
+      "seat": "B",
+      "coordinate": "J4",
+      "hit": false,
+      "sunk": false,
+      "reason": "Search southern edge three-cell lanes",
+      "number": 64
+    },
+    {
+      "type": "shot",
+      "seat": "A",
+      "coordinate": "J3",
+      "hit": true,
+      "sunk": true,
+      "reason": "Test neighbor of I3 hit",
+      "size": "small",
+      "number": 65
+    }
+  ]
+}
